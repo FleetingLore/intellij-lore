@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5e370a7-8846-48cd-bad6-1c57d3c54b91" name="Changes" comment="移除模版">
-      <change afterPath="$PROJECT_DIR$/example/Intro.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/Repositories/intellij-lore.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/Repositories/local.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/Repositories/lore.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/Repositories/web-collections.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/examples.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/local.lore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreFileType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreIcons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b5e370a7-8846-48cd-bad6-1c57d3c54b91" name="Changes" comment="移除模版" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
