@@ -1,0 +1,5 @@
+web collections on GitHub = _ // 占位符
+
+// 以后可以设计一个叫 # private 的 Tag，用于标注作用域，给出错误
+// 也有 # public，重复声明的时候给出错误
+// 所有的错误都可以设置为忽略项

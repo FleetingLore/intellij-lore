@@ -1,0 +1,30 @@
+// 命名空间结构（Domain）声明
+// 这里的名词（可以包含空格但这里没体现出来）不是 Path 类型
++ root // 不需要声明 local.lore 自身
+  // 顺序随意
+  // 如果没有声明，不能被外部引用
+  examples // File 类型，File 是 Floder 的要素
+  - Intro // Category 类型，Category 是 Domain 的要素
+  - Repositories // 子 Category 的名词默认可用
+
+My GitHub home page = github.com/FleetingLore
+
+Welcome! This is the root category with a file name `local.lore`.
+
+暂时不要考虑转义符，因为语法尚未
+/* 注释可以嵌套，但会警告 */稳
+定，以后还要加 `Tag` 类型/* Tag 类
+型的语法规则也挺多的，而且还有一个叫挂
+载空间的东西相关的概念还有生命周期，
+重演周期，风（气场和息场），度规
+注入（它们的范畴的拓扑类
+似于 kotlin 的 5 个 scope
+function 的概念平衡，实现它的
+话会很复杂，就先不做了*/，类似于
+ rust 的 trait 和 macro 或者 OO
+ 的 interface 或 swift 的 pr
+ otocol 或 Kotlin 和 python
+ 的 @...
+
+// examples below
+* examples for referencing inside categories > ::examples // 绝对路径，此处省略 Path 中的 Root

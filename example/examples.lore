@@ -1,0 +1,15 @@
+// 只有 `local.lore` 要声明，这里实现就行了
+
+// Domain 仅影响网页渲染，不决定命名空间结构
+// 可多级嵌套
+* My Repositories // 范畴（Category）和领域（Domain）的拓扑区别是领域的集合是树而范畴的集合是有一个极大度的点的图
+  Lore for Intellij > Root::Repositories::intellij-lore // 命名空间用小写
+  Lore > ::Repositories::lore // 省略了 root 的绝对路径
+  web collections > Repositories::web-collections // 相对路径
+// 设计 Root 这个名词只是为了方便以后做多 lore 库协作
+// 不能叫 Root
+
+About > ::Intro // 绝对路径
+// 插件应给提供把 *.lore 文件转换成 Category File 或 Category Floder，只有
+// local.lore 的文件夹和文件形式的 *.lore 范畴
+// 还要考虑一下怎么融合 # public 的设计

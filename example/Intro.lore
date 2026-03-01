@@ -1,0 +1,24 @@
++ Intro // 这一行体现了它是 Category File 而不是 Category Floder
+// 没有子 Category，但实际上可以嵌套
+// 参考 rust 的两种模块方法
+
+This is an example.
+// 不满足任何语法结构则识别为要素
+// Tag 形式的要素等价于注释，也就
+// 是说可以当注释用，但是有可选生效的警告
+// 这个可选先做成设置项，以后做成用配
+// 置文件声明的节点，但这是在开发 lore 的
+// 支持 IDE（基于 IntellIJ 开源社区
+// 版，名叫FleetingLore） 之后的事
+
+A floder with no `local.lore` will not be recognized as a lore category.
+
+`example` is in the root category.
+// `...` 的实现以后也做成节点
+// 目前只有一个叫 Web Collections 这个高度整合的节点
+
+`Intro` is a lore category.
+
+`Repositories` is a lore category with more lore files.
+
+// 暂时还没有多个 lore 库联动的设计想法
