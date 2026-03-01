@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.intellij.sdk"
-version = "1.0-SNAPSHOT"
+version = "0.0.0"
 
 repositories {
     mavenCentral()
@@ -36,6 +36,9 @@ intellijPlatform {
             Initial version
         """.trimIndent()
     }
+
+
+
 }
 
 tasks {
