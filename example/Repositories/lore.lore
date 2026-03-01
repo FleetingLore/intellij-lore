@@ -1,0 +1,10 @@
+Lore on GitHub = github.com/FleetingLore/intellij-lore
+// 以后大概会加模版，用 Tag 实现，比如
+// 目前这个插件开发的是 Web Collections 实现，提供了各种行/域类型和 Tag 类型
+// 没有实现 feature 树（可以有 feature 节点复用所以也许不应该叫树）的 Lore 语言是只有行/域的
+// 定义，甚至没有指定他们的语法，也没有 Web Collections 实现的 Link 类型和
+// Reference 类型（一开始的代码上和 Link 类型一样只是解析有区别，因为我水平不够）
+// Tag 也只是没有指定语法，然后有个 Lore 标准节点，提供了他们的基本语法但不去细化类型
+// 以后会开发 Corain 语言实现，为了实现 lore 的自举并体现其语言特色
+// 实现是节点的有效组合，我目前能想到的实现还有，资源包文件分配节点（两年前做的），
+// 广播结构节点（比如说一个消息发给一个学校的每一个人）
