@@ -4,29 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5e370a7-8846-48cd-bad6-1c57d3c54b91" name="Changes" comment="移除模版">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreFile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreFileType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreIcons.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLanguage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLexer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLinkLine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParserDefination.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LorePlusLine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTextLine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreToken.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTypes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.lore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="b5e370a7-8846-48cd-bad6-1c57d3c54b91" name="Changes" comment="迁移">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreFileType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreIcons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/intellij/sdk/lore/LoreLanguage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreFile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLexer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLexer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLinkLine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreLinkLine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParserDefination.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreParserDefination.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LorePlusLine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTitleLine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTextLine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreAtomLine.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreToken.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreToken.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTypes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/intellij/sdk/lore/LoreTypes.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +90,7 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="kotlin.jupyter.empty" />
       </list>
     </option>
   </component>
@@ -135,6 +128,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.Build intellij-lore.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Download IntelliJ Platform sources.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Run IDE with Plugin.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.intellij-lore [buildPlugin].executor&quot;: &quot;Run&quot;,
@@ -235,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772403013808</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="迁移">
+      <option name="closed" value="true" />
+      <created>1772525318196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772525318196</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +254,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="创建项目" />
     <MESSAGE value="移除模版" />
-    <option name="LAST_COMMIT_MESSAGE" value="移除模版" />
+    <MESSAGE value="迁移" />
+    <option name="LAST_COMMIT_MESSAGE" value="迁移" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

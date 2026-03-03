@@ -6,10 +6,46 @@ import com.intellij.lang.PsiParser
 import com.intellij.psi.tree.IElementType
 
 class LoreParser : PsiParser {
-    override fun parse(
-        p0: IElementType,
-        p1: PsiBuilder
-    ): ASTNode {
-        TODO("Not yet implemented")
+    override fun parse(root: IElementType, builder: PsiBuilder): ASTNode {
+        val rootMarker = builder.mark()
+
+        while (!builder.eof()) {
+            val tokenType = builder.tokenType
+            when (tokenType) {
+                LoreTypes.TITLE -> parseTitleLine(builder)
+                LoreTypes.LINK -> parseLinkLine(builder)
+                LoreTypes.ATOM -> parseAtomLine(builder)
+                LoreTypes.EMPTY -> parseEmptyLine(builder)
+                else -> builder.advanceLexer() // 跳过未知 token
+            }
+        }
+
+        rootMarker.done(root)
+        return builder.treeBuilt
+    }
+
+    private fun parseTitleLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 TITLE
+        // 这里可以解析 CONTENT
+        marker.done(LoreTypes.TITLE)
+    }
+
+    private fun parseLinkLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 LINK
+        marker.done(LoreTypes.LINK)
+    }
+
+    private fun parseAtomLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 ATOM
+        marker.done(LoreTypes.ATOM)
+    }
+
+    private fun parseEmptyLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 EMPTY
+        marker.done(LoreTypes.EMPTY)
     }
 }

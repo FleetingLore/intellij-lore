@@ -3,4 +3,4 @@ package org.intellij.sdk.lore
 import com.intellij.extapi.psi.ASTWrapperPsiElement
 import com.intellij.lang.ASTNode
 
-class LoreToken(node: ASTNode) : ASTWrapperPsiElement(node)
+class LoreTitleLine(node: ASTNode) : ASTWrapperPsiElement(node)
