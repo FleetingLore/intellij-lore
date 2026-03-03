@@ -1,10 +1,8 @@
 package org.intellij.sdk.lore
 
-import com.intellij.lexer.FlexLexer
 import com.intellij.lexer.Lexer
 import com.intellij.lexer.LexerPosition
 import com.intellij.psi.tree.IElementType
-import j.G.j.F
 
 class LoreLexer : Lexer() {
     private var buffer: CharSequence = ""

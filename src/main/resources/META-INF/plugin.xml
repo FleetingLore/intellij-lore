@@ -14,5 +14,10 @@
         <lang.syntaxHighlighterFactory language="Lore"
                                        implementationClass="org.intellij.sdk.lore.LoreSyntaxHighlighterFactory"/>
         <iconProvider implementation="org.intellij.sdk.lore.LorePropertyIconProvider"/>
+        <colorSettingsPage implementation="org.intellij.sdk.lore.LoreColorSettingsPage"/>
+        <lang.commenter language="Lore"
+                        implementationClass="org.intellij.sdk.lore.LoreCommenter"/>
+        <lang.findUsagesProvider language="Lore"
+                                 implementationClass="org.intellij.sdk.lore.LoreFindUsagesProvider"/>
     </extensions>
 </idea-plugin>

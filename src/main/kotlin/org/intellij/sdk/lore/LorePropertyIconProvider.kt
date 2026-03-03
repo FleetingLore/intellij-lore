@@ -1,21 +1,17 @@
-package org.intellij.sdk.lore;
+package org.intellij.sdk.lore
 
-import com.intellij.ide.IconProvider;
-import com.intellij.psi.PsiElement;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import javax.swing.*;
+import com.intellij.ide.IconProvider
+import com.intellij.psi.PsiElement
+import javax.swing.Icon
 
-public class LorePropertyIconProvider extends IconProvider {
-
-    @Override
-    public @Nullable Icon getIcon(@NotNull PsiElement psiElement, int i) {
-        return switch (psiElement) {
-            case LoreTitleLine ignored -> LoreIcons.TITLE;
-            case LoreLinkLine ignored -> LoreIcons.LINK;
-            case LoreAtomLine ignored -> LoreIcons.ATOM;
-            case LoreToken ignored -> LoreIcons.EMPTY;
-            default -> null;
-        };
+class LorePropertyIconProvider : IconProvider() {
+    override fun getIcon(psiElement: PsiElement, i: Int): Icon? {
+        return when (psiElement) {
+            is LoreTitleLine-> LoreIcons.TITLE
+            is LoreLinkLine -> LoreIcons.LINK
+            is LoreAtomLine -> LoreIcons.ATOM
+            is LoreToken-> LoreIcons.EMPTY
+            else -> null
+        }
     }
 }

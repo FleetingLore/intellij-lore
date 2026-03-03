@@ -1,8 +1,8 @@
 package org.intellij.sdk.lore
 
 import com.intellij.lexer.Lexer
-import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
+import com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase
 import com.intellij.psi.tree.IElementType
 
@@ -21,15 +21,9 @@ class LoreSyntaxHighlighter : SyntaxHighlighterBase() {
     }
 
     companion object {
-        val TITLE: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "LORE_TITLE", DefaultLanguageHighlighterColors.KEYWORD
-        )
-        val LINK: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "LORE_LINK", DefaultLanguageHighlighterColors.STRING
-        )
-        val ATOM: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "LORE_ATOM", DefaultLanguageHighlighterColors.DOC_CODE_BLOCK
-        )
+        val TITLE: TextAttributesKey = createTextAttributesKey("LORE_TITLE")
+        val LINK: TextAttributesKey = createTextAttributesKey("LORE_LINK")
+        val ATOM: TextAttributesKey = createTextAttributesKey("LORE_ATOM")
 
         private val TITLE_KEYS = arrayOf(TITLE)
         private val LINK_KEYS = arrayOf(LINK)
