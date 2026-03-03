@@ -1,8 +1,10 @@
 package org.intellij.sdk.lore
 
+import com.intellij.lexer.FlexLexer
 import com.intellij.lexer.Lexer
 import com.intellij.lexer.LexerPosition
 import com.intellij.psi.tree.IElementType
+import j.G.j.F
 
 class LoreLexer : Lexer() {
     private var buffer: CharSequence = ""
@@ -21,29 +23,31 @@ class LoreLexer : Lexer() {
         this.tokenList.clear()
 
         val text = buffer.subSequence(startOffset, endOffset).toString()
+
+        // 如果是空文件，直接返回
+        if (text.isEmpty()) return
+        
         val lines = text.lines()
         var pos = startOffset
 
-        for (line in lines) {
+        for ((index, line) in lines.withIndex()) {
             val trimmed = line.trimStart()
             val lineEnd = pos + line.length
 
+            // 1. 添加行内容 Token
             when {
-                trimmed.startsWith("+ ") -> {
-                    tokenList.add(TokenData(LoreTypes.TITLE, pos, lineEnd))
-                }
-                trimmed.contains(" = ") -> {
-                    tokenList.add(TokenData(LoreTypes.LINK, pos, lineEnd))
-                }
-                trimmed.isNotBlank() -> {
-                    tokenList.add(TokenData(LoreTypes.ATOM, pos, lineEnd))
-                }
-                else -> {
-                    tokenList.add(TokenData(LoreTypes.EMPTY, pos, lineEnd))
-                }
+                trimmed.startsWith("+ ") -> tokenList.add(TokenData(LoreTypes.TITLE, pos, lineEnd))
+                trimmed.contains(" = ") -> tokenList.add(TokenData(LoreTypes.LINK, pos, lineEnd))
+                trimmed.isNotBlank() -> tokenList.add(TokenData(LoreTypes.ATOM, pos, lineEnd))
+                else -> tokenList.add(TokenData(LoreTypes.EMPTY, pos, lineEnd))
             }
 
-            pos = lineEnd + 1 // 跳过换行符
+            // 2. 如果不是最后一行，添加 CRLF Token
+            if (index < lines.size - 1) {
+                tokenList.add(TokenData(LoreTypes.CRLF, lineEnd, lineEnd + 1))
+            }
+
+            pos = lineEnd + 1
         }
     }
 

@@ -11,6 +11,7 @@
         <fileType name="Lore File" implementationClass="org.intellij.sdk.lore.LoreFileType" fieldName="INSTANCE"
                   language="Lore" extensions="lore"/>zs
         <lang.parserDefinition language="Lore" implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
-
+        <lang.syntaxHighlighterFactory language="Lore"
+                                       implementationClass="org.intellij.sdk.lore.LoreSyntaxHighlighterFactory"/>
     </extensions>
 </idea-plugin>
