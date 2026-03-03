@@ -13,5 +13,6 @@
         <lang.parserDefinition language="Lore" implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Lore"
                                        implementationClass="org.intellij.sdk.lore.LoreSyntaxHighlighterFactory"/>
+        <iconProvider implementation="org.intellij.sdk.lore.LorePropertyIconProvider"/>
     </extensions>
 </idea-plugin>
