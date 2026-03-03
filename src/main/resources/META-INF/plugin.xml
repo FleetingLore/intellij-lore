@@ -9,6 +9,8 @@
     <depends>com.intellij.modules.lsp</depends>
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Lore File" implementationClass="org.intellij.sdk.lore.LoreFileType" fieldName="INSTANCE"
-                  language="Lore" extensions="lore"/>
+                  language="Lore" extensions="lore"/>zs
+        <lang.parserDefinition language="Lore" implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
+
     </extensions>
 </idea-plugin>
