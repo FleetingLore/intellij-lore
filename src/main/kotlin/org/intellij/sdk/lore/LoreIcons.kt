@@ -5,6 +5,9 @@ import javax.swing.Icon
 
 object LoreIcons {
     @JvmField
+    val CATEGORY: Icon = IconLoader.getIcon("/icons/lore-category.svg", LoreIcons::class.java)
+
+    @JvmField
     val FILE: Icon = IconLoader.getIcon("/icons/lore-file.svg", LoreIcons::class.java)
 
     @JvmField

@@ -2,22 +2,81 @@
     <id>org.intellij.sdk.lore</id>
     <name>Lore</name>
     <vendor url="https://fleetinglore.github.io">FleetingLore</vendor>
+
     <description><![CDATA[
-        Lore support for IntellIJ
-        Implementation: Web Collections
+        Lore language support for IntelliJ IDEA
+        <br>
+        <em>Implementation: Web Collections</em>
     ]]></description>
-    <depends>com.intellij.modules.lsp</depends>
+
+    <depends>com.intellij.modules.platform</depends>
+
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Lore File" implementationClass="org.intellij.sdk.lore.LoreFileType" fieldName="INSTANCE"
-                  language="Lore" extensions="lore"/>zs
-        <lang.parserDefinition language="Lore" implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
-        <lang.syntaxHighlighterFactory language="Lore"
-                                       implementationClass="org.intellij.sdk.lore.LoreSyntaxHighlighterFactory"/>
-        <iconProvider implementation="org.intellij.sdk.lore.LorePropertyIconProvider"/>
-        <colorSettingsPage implementation="org.intellij.sdk.lore.LoreColorSettingsPage"/>
-        <lang.commenter language="Lore"
-                        implementationClass="org.intellij.sdk.lore.LoreCommenter"/>
-        <lang.findUsagesProvider language="Lore"
-                                 implementationClass="org.intellij.sdk.lore.LoreFindUsagesProvider"/>
+        <!-- 文件类型定义 -->
+        <fileType
+                name="Lore File"
+                implementationClass="org.intellij.sdk.lore.LoreFileType"
+                fieldName="INSTANCE"
+                language="Lore"
+                extensions="lore"/>
+
+        <!-- 语法解析 -->
+        <lang.parserDefinition
+                language="Lore"
+                implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
+
+        <!-- 语法高亮 -->
+        <lang.syntaxHighlighterFactory
+                language="Lore"
+                implementationClass="org.intellij.sdk.lore.LoreSyntaxHighlighterFactory"/>
+
+        <!-- 颜色设置 -->
+        <colorSettingsPage
+                implementation="org.intellij.sdk.lore.LoreColorSettingsPage"/>
+
+        <!-- 注释处理 -->
+        <lang.commenter
+                language="Lore"
+                implementationClass="org.intellij.sdk.lore.LoreCommenter"/>
+
+        <!-- 图标提供者 -->
+        <iconProvider
+                implementation="org.intellij.sdk.lore.LorePropertyIconProvider"/>
+        <iconProvider
+                implementation="org.intellij.sdk.lore.LoreDirectoryIconProvider"/>
     </extensions>
+
+    <actions>
+        <action id="Lore.NewFile"
+                class="org.intellij.sdk.lore.actions.NewLoreFileAction"
+                text="Lore File"
+                description="Create new Lore file"
+                icon="org.intellij.sdk.lore.LoreIcons.FILE">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewFile"/>
+        </action>
+
+        <action id="Lore.NewCategory"
+                class="org.intellij.sdk.lore.actions.NewCategoryAction"
+                text="Lore Category"
+                description="Create new Lore Category"
+                icon="org.intellij.sdk.lore.LoreIcons.CATEGORY">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewDir"/>
+        </action>
+
+        <action id="Lore.MarkAsCategory"
+                class="org.intellij.sdk.lore.actions.MarkAsLoreCategoryAction"
+                text="Mark as Lore Category"
+                description="Mark this directory as Lore Category"
+                icon="org.intellij.sdk.lore.LoreIcons.CATEGORY">
+            <add-to-group group-id="MarkRootGroup" anchor="last"/>
+        </action>
+
+        <action id="Lore.UnmarkAsCategory"
+                class="org.intellij.sdk.lore.actions.UnmarkAsCategoryAction"
+                text="Unmark as Lore Category"
+                description="Removes Lore Category marker"
+                icon="org.intellij.sdk.lore.LoreIcons.FILE">
+            <add-to-group group-id="MarkRootGroup" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
