@@ -14,6 +14,8 @@ class LoreParser : PsiParser {
             when (tokenType) {
                 LoreTypes.TITLE -> parseTitleLine(builder)
                 LoreTypes.LINK -> parseLinkLine(builder)
+                LoreTypes.MARKDOWN -> parseMarkdownLine(builder)
+                LoreTypes.HTML -> parseHtmlLine(builder)
                 LoreTypes.ATOM -> parseAtomLine(builder)
                 LoreTypes.EMPTY -> parseEmptyLine(builder)
                 else -> builder.advanceLexer() // 跳过未知 token
@@ -35,6 +37,18 @@ class LoreParser : PsiParser {
         val marker = builder.mark()
         builder.advanceLexer() // 消费 LINK
         marker.done(LoreTypes.LINK)
+    }
+
+    private fun parseMarkdownLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 MARKDOWN
+        marker.done(LoreTypes.MARKDOWN)
+    }
+
+    private fun parseHtmlLine(builder: PsiBuilder) {
+        val marker = builder.mark()
+        builder.advanceLexer() // 消费 HTML
+        marker.done(LoreTypes.HTML)
     }
 
     private fun parseAtomLine(builder: PsiBuilder) {

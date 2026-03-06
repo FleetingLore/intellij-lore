@@ -16,6 +16,8 @@ class LoreSyntaxHighlighter : SyntaxHighlighterBase() {
         return when (tokenType) {
             LoreTypes.TITLE -> TITLE_KEYS
             LoreTypes.LINK -> LINK_KEYS
+            LoreTypes.MARKDOWN -> MARKDOWN_KEYS
+            LoreTypes.HTML -> HTML_KEYS
             LoreTypes.ATOM -> ATOM_KEYS
             else -> EMPTY_KEYS
         }
@@ -24,10 +26,14 @@ class LoreSyntaxHighlighter : SyntaxHighlighterBase() {
     companion object {
         val TITLE: TextAttributesKey = createTextAttributesKey("LORE_TITLE")
         val LINK: TextAttributesKey = createTextAttributesKey("LORE_LINK")
+        val MARKDOWN: TextAttributesKey = createTextAttributesKey("LORE_MARKDOWN")
+        val HTML: TextAttributesKey = createTextAttributesKey("LORE_HTML")
         val ATOM: TextAttributesKey = createTextAttributesKey("LORE_ATOM")
 
         private val TITLE_KEYS = arrayOf(TITLE)
         private val LINK_KEYS = arrayOf(LINK)
+        private val MARKDOWN_KEYS = arrayOf(MARKDOWN)
+        private val HTML_KEYS = arrayOf(HTML)
         private val ATOM_KEYS = arrayOf(ATOM)
         private val EMPTY_KEYS = emptyArray<TextAttributesKey>()
     }

@@ -36,6 +36,8 @@ class LoreLexer : Lexer() {
             when {
                 trimmed.startsWith("+ ") -> tokenList.add(TokenData(LoreTypes.TITLE, pos, lineEnd))
                 trimmed.contains(" = ") -> tokenList.add(TokenData(LoreTypes.LINK, pos, lineEnd))
+                trimmed.contains(" > ") -> tokenList.add(TokenData(LoreTypes.MARKDOWN, pos, lineEnd))
+                trimmed.contains(" | ") -> tokenList.add(TokenData(LoreTypes.HTML, pos, lineEnd))
                 trimmed.isNotBlank() -> tokenList.add(TokenData(LoreTypes.ATOM, pos, lineEnd))
                 else -> tokenList.add(TokenData(LoreTypes.EMPTY, pos, lineEnd))
             }

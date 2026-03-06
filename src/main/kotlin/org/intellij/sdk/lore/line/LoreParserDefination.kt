@@ -18,6 +18,8 @@ import org.intellij.sdk.lore.line.LoreParser
 import org.intellij.sdk.lore.LoreToken
 import org.intellij.sdk.lore.line.types.LoreAtomLine
 import org.intellij.sdk.lore.line.types.LoreTitleLine
+import org.intellij.sdk.lore.line.types.LoreMarkdownLine
+import org.intellij.sdk.lore.line.types.LoreHtmlLine
 
 class LoreParserDefinition : ParserDefinition {
     override fun createLexer(project: Project?): Lexer = LoreLexer()
@@ -36,6 +38,8 @@ class LoreParserDefinition : ParserDefinition {
         return when (node.elementType) {
             LoreTypes.TITLE -> LoreTitleLine(node)
             LoreTypes.LINK -> LoreLinkLine(node)
+            LoreTypes.MARKDOWN -> LoreMarkdownLine(node)
+            LoreTypes.HTML -> LoreHtmlLine(node)
             LoreTypes.ATOM -> LoreAtomLine(node)
             else -> LoreToken(node)
         }

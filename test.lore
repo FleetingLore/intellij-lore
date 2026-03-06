@@ -1,10 +1,12 @@
 a = b
 github.com
 GitHub = github.com
+c | d
+e > f
 test ...
 
 + pages
-  GitHub = github.com
+  GitHub | github.com
   test ...
   + a
     ... = ..
@@ -12,5 +14,7 @@ test ...
     + b
       123456 = 7890
       + c
+      a | b
+      c > d
     + ...
 

@@ -13,25 +13,29 @@ class LoreColorSettingsPage : ColorSettingsPage {
 
     override fun getDemoText() = """
         + title
-        atom
         info = goto
         info | goto
         info > goto
+        atom
     """.trimIndent()
 
     override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String?, TextAttributesKey?> {
         return mapOf(
             "title" to LoreSyntaxHighlighter.TITLE,
-            "atom" to LoreSyntaxHighlighter.ATOM,
-            "link" to LoreSyntaxHighlighter.LINK
+            "link" to LoreSyntaxHighlighter.LINK,
+            "markdown" to LoreSyntaxHighlighter.MARKDOWN,
+            "html" to LoreSyntaxHighlighter.HTML,
+            "atom" to LoreSyntaxHighlighter.ATOM
         )
     }
 
     override fun getAttributeDescriptors(): Array<AttributesDescriptor> {
         return arrayOf(
             AttributesDescriptor("Title", LoreSyntaxHighlighter.TITLE),
-            AttributesDescriptor("Atom", LoreSyntaxHighlighter.ATOM),
-            AttributesDescriptor("Link", LoreSyntaxHighlighter.LINK)
+            AttributesDescriptor("Link", LoreSyntaxHighlighter.LINK),
+            AttributesDescriptor("Markdown", LoreSyntaxHighlighter.MARKDOWN),
+            AttributesDescriptor("Html", LoreSyntaxHighlighter.HTML),
+            AttributesDescriptor("Atom", LoreSyntaxHighlighter.ATOM)
         )
     }
 
