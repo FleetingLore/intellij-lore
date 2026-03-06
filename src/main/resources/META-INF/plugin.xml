@@ -23,7 +23,7 @@
         <!-- 语法解析 -->
         <lang.parserDefinition
                 language="Lore"
-                implementationClass="org.intellij.sdk.lore.LoreParserDefinition"/>
+                implementationClass="org.intellij.sdk.lore.line.LoreParserDefinition"/>
 
         <!-- 语法高亮 -->
         <lang.syntaxHighlighterFactory
@@ -32,7 +32,7 @@
 
         <!-- 颜色设置 -->
         <colorSettingsPage
-                implementation="org.intellij.sdk.lore.LoreColorSettingsPage"/>
+                implementation="org.intellij.sdk.lore.line.LoreColorSettingsPage"/>
 
         <!-- 注释处理 -->
         <lang.commenter
@@ -41,7 +41,7 @@
 
         <!-- 图标提供者 -->
         <iconProvider
-                implementation="org.intellij.sdk.lore.LorePropertyIconProvider"/>
+                implementation="org.intellij.sdk.lore.line.LorePropertyIconProvider"/>
         <iconProvider
                 implementation="org.intellij.sdk.lore.LoreDirectoryIconProvider"/>
     </extensions>

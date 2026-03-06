@@ -1,16 +1,21 @@
-package org.intellij.sdk.lore
+package org.intellij.sdk.lore.line
 
 import com.intellij.ide.IconProvider
 import com.intellij.psi.PsiElement
+import org.intellij.sdk.lore.LoreIcons
+import org.intellij.sdk.lore.line.types.LoreLinkLine
+import org.intellij.sdk.lore.LoreToken
+import org.intellij.sdk.lore.line.types.LoreAtomLine
+import org.intellij.sdk.lore.line.types.LoreTitleLine
 import javax.swing.Icon
 
 class LorePropertyIconProvider : IconProvider() {
     override fun getIcon(psiElement: PsiElement, i: Int): Icon? {
         return when (psiElement) {
-            is LoreTitleLine-> LoreIcons.TITLE
+            is LoreTitleLine -> LoreIcons.TITLE
             is LoreLinkLine -> LoreIcons.LINK
             is LoreAtomLine -> LoreIcons.ATOM
-            is LoreToken-> LoreIcons.EMPTY
+            is LoreToken -> LoreIcons.EMPTY
             else -> null
         }
     }

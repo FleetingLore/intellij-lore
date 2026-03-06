@@ -1,9 +1,10 @@
-package org.intellij.sdk.lore
+package org.intellij.sdk.lore.line
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.openapi.options.colors.ColorSettingsPage
+import org.intellij.sdk.lore.LoreIcons
 
 class LoreColorSettingsPage : ColorSettingsPage {
     override fun getIcon() = LoreIcons.FILE
@@ -13,7 +14,9 @@ class LoreColorSettingsPage : ColorSettingsPage {
     override fun getDemoText() = """
         + title
         atom
-        info = url
+        info = goto
+        info | goto
+        info > goto
     """.trimIndent()
 
     override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String?, TextAttributesKey?> {

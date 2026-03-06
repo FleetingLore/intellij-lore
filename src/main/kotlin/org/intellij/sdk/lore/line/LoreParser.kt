@@ -1,4 +1,4 @@
-package org.intellij.sdk.lore
+package org.intellij.sdk.lore.line
 
 import com.intellij.lang.ASTNode
 import com.intellij.lang.PsiBuilder

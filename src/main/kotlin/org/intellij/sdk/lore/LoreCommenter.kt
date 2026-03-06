@@ -4,7 +4,7 @@ import com.intellij.lang.Commenter
 
 internal class LoreCommenter : Commenter {
     override fun getLineCommentPrefix(): String {
-        return "#"
+        return "# "
     }
 
     override fun getBlockCommentPrefix(): String {
@@ -16,10 +16,10 @@ internal class LoreCommenter : Commenter {
     }
 
     override fun getCommentedBlockCommentPrefix(): String {
-        return "/*"
+        return "//*"
     }
 
     override fun getCommentedBlockCommentSuffix(): String {
-        return "*/"
+        return "*//"
     }
 }

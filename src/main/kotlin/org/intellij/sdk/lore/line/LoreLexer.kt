@@ -1,4 +1,4 @@
-package org.intellij.sdk.lore
+package org.intellij.sdk.lore.line
 
 import com.intellij.lexer.Lexer
 import com.intellij.lexer.LexerPosition
@@ -24,7 +24,7 @@ class LoreLexer : Lexer() {
 
         // 如果是空文件，直接返回
         if (text.isEmpty()) return
-        
+
         val lines = text.lines()
         var pos = startOffset
 
